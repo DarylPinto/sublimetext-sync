@@ -1,0 +1,134 @@
+[	
+
+	//////////////////////////////
+	//Daryl's custom vi commands//
+	//////////////////////////////
+
+
+	//Enter command mode with shift + tab
+	{ "keys": ["j","j"], "command": "exit_insert_mode",
+		"context":
+		[
+			{ "key": "setting.command_mode", "operand": false },
+			{ "key": "setting.is_widget", "operand": false }
+		]
+	},
+
+	{ "keys": ["shift+space"], "command": "exit_visual_mode",
+		"context":
+		[
+			{ "key": "setting.command_mode"},
+			{ "key": "num_selections", "operand": 1},
+			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
+		]
+	},
+
+	//Enter insert mode before current character
+	{ "keys": ["a"], "command": "enter_insert_mode",
+	  "context":
+	  [
+			{"key": "setting.command_mode"},
+			{"key": "selection_empty"}
+	  ]
+	},
+
+	//Enter insert mode after current character
+	{ "keys": ["i"], "command": "enter_insert_mode", "args":
+		{"insert_command": "move", "insert_args": {"by": "characters", "forward": true} },
+		"context":
+		[
+			{"key": "setting.command_mode"},
+			{"key": "selection_empty"}
+		]
+	},
+
+	//Move right one character
+	{ "keys": ["s"], "command": "set_motion", "args": {
+		"motion": "vi_move_by_characters_in_line",
+		"motion_args": {"forward": true, "extend": true, "visual": false }},
+		"context": [{"key": "setting.command_mode"}]
+	},
+
+	//Move up one line
+	{ "keys": ["t"], "command": "set_motion", "args": {
+	  "motion": "move",
+	  "motion_args": {"by": "lines", "forward": false, "extend": true },
+	  "linewise": true },
+	  "context": [{"key": "setting.command_mode"}]
+	},
+	{ "keys": ["t"], "command": "set_motion", "args": {
+	  "motion": "move",
+	    "motion_args": {"by": "stops", "line_begin": true, "forward": false, "extend": true },
+	  "linewise": true },
+	  "context":
+	  [
+	    {"key": "setting.command_mode"},
+	    {"key": "vi_motion_mode", "operand": "line"}
+	  ]
+ 	},
+
+ 	//Move left one character
+ 	{ "keys": ["ctrl+w", "h"], "command": "move_group_focus",
+ 		"args": {"direction": "left"},
+ 		"context": [{"key": "setting.vintage_ctrl_keys"}, {"key": "setting.command_mode"}]
+ 	},
+
+ 	//Move down one line
+ 	{ "keys": ["n"], "command": "set_motion", "args": {
+ 		"motion": "move",
+ 		"motion_args": {"by": "lines", "forward": true, "extend": true },
+ 		"linewise": true },
+ 		"context": [{"key": "setting.command_mode"}]
+ 	},
+ 	{ "keys": ["n"], "command": "set_motion", "args": {
+ 		"motion": "move",
+ 		"motion_args": {"by": "stops", "line_begin": true, "forward": true, "extend": true },
+ 		"linewise": true },
+ 		"context":
+ 		[
+ 			{"key": "setting.command_mode"},
+ 			{"key": "vi_motion_mode", "operand": "line"}
+ 		]
+ 	},
+
+ 	//Move to first character in line
+ 	{ "keys": ["d"], "command": "set_motion", "args": {
+ 		"motion": "vi_move_to_first_non_white_space_character",
+ 		"motion_args": {"extend": true },
+ 		"clip_to_line": true },
+ 		"context": [{"key": "setting.command_mode"}]
+ 	},
+
+ 	//Move to last character in line
+ 	{ "keys": ["-"], "command": "set_motion", "args": {
+ 		"motion": "vi_move_to_hard_eol",
+ 		"motion_args": {"repeat": 1, "extend": true},
+ 		"inclusive": true,
+ 		"clip_to_line": true },
+ 		"context": [{"key": "setting.command_mode"}]
+ 	},
+
+ 	//Delete selected text
+ 	{ "keys": ["e"], "command": "set_action", "args": {
+		"action": "vi_delete",
+		"description": "Delete"},
+		"context": [{"key": "setting.command_mode"}]
+	},
+
+	//Move to first letter of word
+	{ "keys": ["b"], "command": "set_motion", "args": {
+		"motion": "move",
+		"motion_args": {"by": "stops", "word_begin": true, "punct_begin": true, "empty_line": true, "forward": false, "extend": true },
+		"clip_to_line": true },
+		"context": [{"key": "setting.command_mode"}]
+	},
+
+	//Move to last letter of word
+	{ "keys": ["w"], "command": "set_motion", "args": {
+		"motion": "move",
+		"motion_args": {"by": "stops", "word_end": true, "punct_end": true, "empty_line": true, "forward": true, "extend": true },
+		"inclusive": true,
+		"clip_to_line": true },
+		"context": [{"key": "setting.command_mode"}]
+	},
+]

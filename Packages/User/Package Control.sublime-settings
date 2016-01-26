@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"BracketHighlighter",
+		"Emmet",
+		"jQuery",
+		"LiveStyle",
+		"Package Control",
+		"SideBarEnhancements",
+		"Syntax Highlighting for Sass",
+		"Theme - Afterglow",
+		"Theme - Asphalt"
+	]
+}
