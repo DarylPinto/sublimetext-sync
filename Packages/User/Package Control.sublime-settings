@@ -6,11 +6,15 @@
 	"installed_packages":
 	[
 		"BracketHighlighter",
+		"ColorPicker",
 		"Emmet",
 		"jQuery",
 		"LiveStyle",
+		"Minifier",
 		"Package Control",
+		"SASS Build",
 		"SideBarEnhancements",
+		"SublimeOnSaveBuild",
 		"Syntax Highlighting for Sass",
 		"Theme - Afterglow",
 		"Theme - Asphalt"
