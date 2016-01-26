@@ -1,8 +1,10 @@
 # Sublime Text 3 Sync
 
-Move the "Packages" and "Install Packages" folders to:
+My personal sublime text keybindings + plugins.
 
-C:\Users\USERNAME\AppData\Roaming\Sublime Text 3\
+Move the "Packages" and "Installed Packages" folders to:
+
+`C:\Users\USERNAME\AppData\Roaming\Sublime Text 3\`
 
 ##Plugins Installed
 
