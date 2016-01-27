@@ -14,15 +14,6 @@
 		]
 	},
 
-	{ "keys": ["shift+space"], "command": "exit_visual_mode",
-		"context":
-		[
-			{ "key": "setting.command_mode"},
-			{ "key": "num_selections", "operand": 1},
-			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
-		]
-	},
-
 	//Enter insert mode before current character
 	{ "keys": ["a"], "command": "enter_insert_mode",
 	  "context":
@@ -66,7 +57,8 @@
 	//Move up ten lines
 	{ "keys": ["T"],
 		"command": "move_more",
-		"args": { "amount": 10, "forward": false } 
+		"args": { "amount": 10, "forward": false },
+		"context": [{"key": "setting.command_mode"}] 
 	},
 
 	//Move down one line
@@ -80,7 +72,8 @@
  	//Move down ten lines
 	{ "keys": ["N"],
 		"command": "move_more",
-		"args": { "amount": 10, "forward": true } 
+		"args": { "amount": 10, "forward": true },
+		"context": [{"key": "setting.command_mode"}]
 	},
 
  	//Move to first character in line
