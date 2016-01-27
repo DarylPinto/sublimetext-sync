@@ -1,10 +1,16 @@
 # Sublime Text 3 Sync
 
-My personal sublime text keybindings + plugins.
+My personal ST3 keybindings + plugins.
+
+###Windows
 
 Move the "Packages" and "Installed Packages" folders to:
 
 `C:\Users\USERNAME\AppData\Roaming\Sublime Text 3\`
+
+###Other OSs
+
+[Install package control then sync only the `Packages/User` folder](https://packagecontrol.io/docs/syncing)
 
 ##Plugins Installed
 
@@ -30,5 +36,6 @@ Move the "Packages" and "Installed Packages" folders to:
 
 ###Theme/Style
 
-* [Theme - Afterglow](https://packagecontrol.io/packages/Theme%20-%20Afterglow)
 * [Theme - Asphalt](https://packagecontrol.io/packages/Theme%20-%20Asphalt)
+* [Theme - Afterglow](https://packagecontrol.io/packages/Theme%20-%20Afterglow)
+* [Theme - Material](https://packagecontrol.io/packages/Material%20Theme)

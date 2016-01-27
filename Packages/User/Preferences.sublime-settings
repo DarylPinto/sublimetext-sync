@@ -1,6 +1,6 @@
 {
 	"auto_complete_commit_on_tab": true,
-	"color_scheme": "Packages/Theme - Afterglow/Afterglow-monokai.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-OceanicNext.tmTheme",
 	"enable_tab_scrolling": false,
 	"font_face": "Monaco",
 	"font_size": 11,
@@ -8,6 +8,6 @@
 	[
 	],
 	"tab_size": 2,
-	"theme": "Asphalt.sublime-theme",
+	"theme": "Material-Theme.sublime-theme",
 	"update_check": true
 }
