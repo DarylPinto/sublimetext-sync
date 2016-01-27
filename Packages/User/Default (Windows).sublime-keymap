@@ -5,7 +5,7 @@
 	//////////////////////////////
 
 
-	//Enter command mode with shift + tab
+	//Enter command mode with j+j
 	{ "keys": ["j","j"], "command": "exit_insert_mode",
 		"context":
 		[
@@ -42,6 +42,12 @@
 		]
 	},
 
+	//Move left one character
+ 	{ "keys": ["h"], "command": "move_group_focus",
+ 		"args": {"direction": "left"},
+ 		"context": [{"key": "setting.vintage_ctrl_keys"}, {"key": "setting.command_mode"}]
+ 	},
+
 	//Move right one character
 	{ "keys": ["s"], "command": "set_motion", "args": {
 		"motion": "vi_move_by_characters_in_line",
@@ -56,40 +62,26 @@
 	  "linewise": true },
 	  "context": [{"key": "setting.command_mode"}]
 	},
-	{ "keys": ["t"], "command": "set_motion", "args": {
-	  "motion": "move",
-	    "motion_args": {"by": "stops", "line_begin": true, "forward": false, "extend": true },
-	  "linewise": true },
-	  "context":
-	  [
-	    {"key": "setting.command_mode"},
-	    {"key": "vi_motion_mode", "operand": "line"}
-	  ]
- 	},
 
- 	//Move left one character
- 	{ "keys": ["ctrl+w", "h"], "command": "move_group_focus",
- 		"args": {"direction": "left"},
- 		"context": [{"key": "setting.vintage_ctrl_keys"}, {"key": "setting.command_mode"}]
- 	},
+	//Move up ten lines
+	{ "keys": ["T"],
+		"command": "move_more",
+		"args": { "amount": 10, "forward": false } 
+	},
 
- 	//Move down one line
+	//Move down one line
  	{ "keys": ["n"], "command": "set_motion", "args": {
  		"motion": "move",
  		"motion_args": {"by": "lines", "forward": true, "extend": true },
  		"linewise": true },
  		"context": [{"key": "setting.command_mode"}]
  	},
- 	{ "keys": ["n"], "command": "set_motion", "args": {
- 		"motion": "move",
- 		"motion_args": {"by": "stops", "line_begin": true, "forward": true, "extend": true },
- 		"linewise": true },
- 		"context":
- 		[
- 			{"key": "setting.command_mode"},
- 			{"key": "vi_motion_mode", "operand": "line"}
- 		]
- 	},
+
+ 	//Move down ten lines
+	{ "keys": ["N"],
+		"command": "move_more",
+		"args": { "amount": 10, "forward": true } 
+	},
 
  	//Move to first character in line
  	{ "keys": ["d"], "command": "set_motion", "args": {
