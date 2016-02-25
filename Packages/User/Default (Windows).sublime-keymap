@@ -1,5 +1,10 @@
 [	
 
+	//Fix weird tab cycle behavior
+
+	{ "keys": ["ctrl+tab"], "command": "next_view" },
+	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+
 	//////////////////////////////
 	//Daryl's custom vi commands//
 	//////////////////////////////
