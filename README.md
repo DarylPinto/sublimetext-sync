@@ -22,6 +22,7 @@ Move the "Packages" and "Installed Packages" folders to:
 * [LiveStyle](https://packagecontrol.io/packages/LiveStyle) - Live update viewing in browser
 * [ColorPicker](https://packagecontrol.io/packages/ColorPicker) - Use the OSs native color picker to generate a hex code (Ctrl+Shift+C)
 * [MoveMore](https://github.com/sflip/SublimeMoveMore) - Allows keybindings to move up and down more than 1 line
+* [AlignTab](https://github.com/randy3k/AlignTab) - Align data with regex
 
 ###Preprocessing
 
