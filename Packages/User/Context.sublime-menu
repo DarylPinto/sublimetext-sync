@@ -1,0 +1,19 @@
+[
+   {"caption" : "-"},
+    {
+      "id": "aligntab",
+      "caption": "Align By",
+      "children": [
+          {
+          "caption" : "Number Parameter",
+          "command" : "align_tab",
+          "args"    : {"user_input" : "\\d+,"}
+          },
+          {
+          "caption" : "Bestiary",
+          "command" : "align_tab",
+          "args"    : {"user_input" : "'bestiary.*,"}
+          },
+      ]
+  }
+]
