@@ -39,10 +39,11 @@
 	},
 
 	//Move left one character
- 	{ "keys": ["h"], "command": "move_group_focus",
- 		"args": {"direction": "left"},
- 		"context": [{"key": "setting.vintage_ctrl_keys"}, {"key": "setting.command_mode"}]
- 	},
+ 	{ "keys": ["s"], "command": "set_motion", "args": {
+		"motion": "vi_move_by_characters_in_line",
+		"motion_args": {"forward": false, "extend": true, "visual": false }},
+		"context": [{"key": "setting.command_mode"}]
+	},
 
 	//Move right one character
 	{ "keys": ["s"], "command": "set_motion", "args": {
